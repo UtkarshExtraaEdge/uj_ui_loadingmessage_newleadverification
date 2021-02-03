@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<!-- http://127.0.0.1:5500/loading.html?value=9966338855&token=f5512161983346e8b4f70763345ca940 -->
+
+<body>
+    <div class="loaderWrapper">
+        <h2>Please wait while we are processing your request...</h2>
+        <div class="loader">
+            <!-- For Loader -->
+            <script>
+                const userAction = () => {
+                    setTimeout(function () {
+                        fetchData();
+                    }, 1500);
+
+                }
+                userAction();
+
+                // const queryString = window.location.search;
+                const queryString = "value=9966338855&token=f5512161983346e8b4f70763345ca940";
+
+                const urlParams = new URLSearchParams(queryString);
+
+                const value = urlParams.get('value')
+                const token = urlParams.get('token')
+                console.log("value", value);
+                console.log("token", token);
+
+            </script>
+        </div>
+        <div class="Success">
+            <div class="messageWrapper">
+                <span class="main_Heading">Thank you for verifying your email/Mobile!</span>
+                <br />
+                <span class="subHeading">You have successfully verified your email/Mobile and completed your account set-up.</span>
+            </div>
+        </div>
+
+        <div class="failure">
+            <div class="messageWrapper">
+                <span class="main_Heading">Verification Failed !!!</span>
+                <br />
+                <span class="subHeading">Somthing is wrong, please try again to verify your email/mobile</span>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
